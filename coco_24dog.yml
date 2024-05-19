@@ -1,0 +1,21 @@
+metric: COCO
+num_classes: 3
+
+TrainDataset:
+  !COCODataSet
+    image_dir: image
+    anno_path: /home/aistudio/24dog/train.json
+    dataset_dir: /home/aistudio/24dog/
+    data_fields: ['image', 'gt_bbox', 'gt_class', 'is_crowd']
+
+EvalDataset:
+  !COCODataSet
+    image_dir: image
+    anno_path: /home/aistudio/24dog/val.json
+    dataset_dir: /home/aistudio/24dog/
+
+TestDataset:
+  !ImageFolder
+    ! anno_path: /home/aistudio/24dog/val.json
+    image_dir: image
+    dataset_dir: /home/aistudio/24dog/
