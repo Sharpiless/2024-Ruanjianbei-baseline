@@ -49,7 +49,7 @@ image_dir = '24dog/image'
 train_json = '24dog/train.json'
 val_json = '24dog/val.json'
 output_dir = '24dog_resized'
-resize_ratio = 0.5  # Change this to your desired ratio
+resize_ratio = 0.53  # Change this to your desired ratio
 
 resize_dataset(image_dir, train_json, output_dir, resize_ratio)
 resize_dataset(image_dir, val_json, output_dir, resize_ratio)
